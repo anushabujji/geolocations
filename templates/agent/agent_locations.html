@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h1> Agents near {{actual_location}}</h1>
+<table border="1">
+<tr>
+    <th>Agent</th>
+    <th>Address</th>
+    <th>Distance</th>
+  </tr>
+{% for k in df %}
+ <tr>
+    {% for k,v in k.items %}
+    <td>{{v}}</td>
+    {% endfor %}
+  </tr>
+{% endfor %}
+  </table>
+</body>
+</html>
