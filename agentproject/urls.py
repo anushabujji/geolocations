@@ -22,3 +22,4 @@ urlpatterns = [
     path('',views.locations,name="main"),
     path('agent_locations/<int:city_id>/',views.agent_locations,name="agent_locations")
 ]
+kjvhkj
